@@ -1,69 +1,52 @@
-Sure, here's a sample README file for the integrated MedicalNet and Groq+VLM RAG model system:
-
-# Med-RAGa: AI-Enhanced Diagnostic & Treatment Planning System
-
+Med-RAGa: AI-Enhanced Diagnostic & Treatment Planning System
 Med-RAGa is a Python-based system that integrates the MedicalNet model and the Groq+VLM Retrieval-Augmented Generation (RAG) model to process and analyze medical PDFs or images within PDFs. This system is designed to assist medical professionals in making more informed and personalized treatment decisions by leveraging the latest medical research and patient-specific data.
+Features
 
-## Features
+Latest Medical Research: The system collects the newest medical research from trusted sources using APIs and web scraping, ensuring the information used for diagnosis and treatment planning is accurate and up-to-date.
+Personalized Recommendations: The Groq+VLM RAG model takes into account the patient's unique medical history and details, providing personalized diagnoses and treatment plans that are suitable for the specific patient.
+Trusted Information Sources: The system only uses information from well-known and reputable medical journals and websites, ensuring the reliability and trustworthiness of the data.
+Automated Treatment Suggestions: Medical professionals can use the application to automatically generate treatment suggestions, reducing the time spent on research and planning, and allowing them to focus more on patient care.
+Training and Continuous Learning: Doctors and other medical professionals can use the application as a learning tool to understand possible treatment options and approaches, particularly for complex cases.
+Research Contribution: By analyzing the aggregate data on patient outcomes and treatment efficiency, the application can contribute to medical research.
 
-1. **Latest Medical Research**: The system collects the newest medical research from trusted sources using APIs and web scraping, ensuring the information used for diagnosis and treatment planning is accurate and up-to-date.
+Requirements
 
-2. **Personalized Recommendations**: The Groq+VLM RAG model takes into account the patient's unique medical history and details, providing personalized diagnoses and treatment plans that are suitable for the specific patient.
+Python 3.7 or higher
+PyTorch
+Requests
+JSON
+Pillow
+pdf2image
+Cohere
+Qdrant
+Langchain
+FastAPI
+React (for the frontend)
+Firebase (for the database)
 
-3. **Trusted Information Sources**: The system only uses information from well-known and reputable medical journals and websites, ensuring the reliability and trustworthiness of the data.
+Installation
 
-4. **Automated Treatment Suggestions**: Medical professionals can use the application to automatically generate treatment suggestions, reducing the time spent on research and planning, and allowing them to focus more on patient care.
+Clone the repository:
 
-5. **Training and Continuous Learning**: Doctors and other medical professionals can use the application as a learning tool to understand possible treatment options and approaches, particularly for complex cases.
+Copygit clone https://github.com/your-username/med-raga.git
 
-6. **Research Contribution**: By analyzing the aggregate data on patient outcomes and treatment efficiency, the application can contribute to medical research.
+Install the required Python packages:
 
-## Requirements
+Copypip install -r requirements.txt
 
-- Python 3.7 or higher
-- PyTorch
-- Requests
-- JSON
-- Pillow
-- pdf2image
-- Cohere
-- Qdrant
-- Langchain
-- FastAPI
-- React (for the frontend)
-- Firebase (for the database)
+Download the pretrained MedicalNet model and place it in the appropriate directory.
+Obtain the necessary API keys (HuggingFace, Groq, etc.) and update the main() function with your credentials.
 
-## Installation
+Usage
 
-1. Clone the repository:
-```
-git clone https://github.com/your-username/med-raga.git
-```
+Run the main script:
 
-2. Install the required Python packages:
-```
-pip install -r requirements.txt
-```
+Copypython main.py
 
-3. Download the pretrained MedicalNet model and place it in the appropriate directory.
+The script will process a sample medical PDF, running MedicalNet inference on the images and querying the Groq+VLM RAG model for diagnosis and treatment information.
+The results of the MedicalNet inference and the Groq+VLM response will be printed to the console.
 
-4. Obtain the necessary API keys (HuggingFace, Groq, etc.) and update the `main()` function with your credentials.
-
-## Usage
-
-1. Run the main script:
-```
-python main.py
-```
-
-2. The script will process a sample medical PDF, running MedicalNet inference on the images and querying the Groq+VLM RAG model for diagnosis and treatment information.
-
-3. The results of the MedicalNet inference and the Groq+VLM response will be printed to the console.
-
-## Contributing
-
+Contributing
 Contributions to the Med-RAGa project are welcome. If you find any issues or have suggestions for improvements, please create a new issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+License
+This project is licensed under the MIT License.
